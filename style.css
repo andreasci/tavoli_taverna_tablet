@@ -48,7 +48,7 @@ h1 {
 .tables-scroll-container {
   overflow-y: auto;
   flex-grow: 1;
-  margin-bottom: 20px;
+  margin-bottom: 70px;
 }
 
 .tables {
