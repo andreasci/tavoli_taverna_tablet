@@ -30,9 +30,10 @@ function createSeat(tableId, seatIndex, occupied) {
 }
 
 function createTable(tableId, seatCount) {
-  const seatsHtml = Array.from({ length: seatCount }, (_, i) =>
-    createSeat(tableId, i, false)
-  ).join("");
+      const seatsHtml = Array.from({ length: seatCount }, (_, i) =>
+      createSeat(tableId, i, false)
+    ).join("");
+
 
   return `
     <div class="table ${seatCount === 16 ? 'large' : 'small'}" data-id="${tableId}" data-total="${seatCount}">
@@ -53,8 +54,6 @@ function generateTables() {
     container.innerHTML += createTable(id, t.seats);
   });
   attachSeatHandlers();
-  enableSeatDrag();
-  enableSeatTouch();
   updateCounter();
 }
 
@@ -64,44 +63,6 @@ function attachSeatHandlers() {
       seat.classList.toggle("occupied");
       updateTableCounter(seat.closest(".table"));
       updateCounter();
-    });
-  });
-}
-
-let isDragging = false;
-
-function enableSeatDrag() {
-  document.querySelectorAll(".seat").forEach(seat => {
-    seat.addEventListener("mousedown", () => isDragging = true);
-    seat.addEventListener("mouseup", () => isDragging = false);
-    seat.addEventListener("mouseenter", () => {
-      if (isDragging) {
-        seat.classList.toggle("occupied");
-        updateTableCounter(seat.closest(".table"));
-        updateCounter();
-      }
-    });
-  });
-
-  document.addEventListener("mouseup", () => isDragging = false);
-}
-
-function enableSeatTouch() {
-  document.querySelectorAll(".seat").forEach(seat => {
-    seat.addEventListener("touchstart", e => {
-      e.preventDefault();
-      seat.classList.toggle("occupied");
-      updateTableCounter(seat.closest(".table"));
-      updateCounter();
-    });
-    seat.addEventListener("touchmove", e => {
-      const touch = e.touches[0];
-      const el = document.elementFromPoint(touch.clientX, touch.clientY);
-      if (el?.classList.contains("seat")) {
-        el.classList.toggle("occupied");
-        updateTableCounter(el.closest(".table"));
-        updateCounter();
-      }
     });
   });
 }
