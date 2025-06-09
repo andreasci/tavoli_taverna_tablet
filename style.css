@@ -67,9 +67,9 @@ h1 {
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
 
 
-  animation: appear linear;
+  /*animation: appear linear;
   animation-timeline: view();
-  animation-range: entry 0 cover 40%;
+  animation-range: entry 0 cover 40%;*/
 }
 
 .table-header {
@@ -116,6 +116,7 @@ h1 {
   gap: 10px;
 }
 
+/*
 @keyframes appear {
     from{ 
         opacity: 0;
@@ -125,4 +126,4 @@ h1 {
         opacity: 1;
         scale: 1;
     }
-}
+}*/
