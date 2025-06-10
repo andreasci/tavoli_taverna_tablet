@@ -8,9 +8,9 @@ const TABLE_LAYOUT = [
     { number: 7, seats: 8 },
     { number: 8, seats: 8 },
     { number: 9, seats: 8 },
-    { number: 10, seats: 16 },
+    { number: 10, seats: 8 },
     { number: 11, seats: 16 },
-    { number: 12, seats: 8 },
+    { number: 12, seats: 16 },
     { number: 13, seats: 8 },
     { number: 14, seats: 8 },
     { number: 15, seats: 16 },
@@ -22,7 +22,7 @@ const TABLE_LAYOUT = [
     { number: 21, seats: 16 },
     { number: 22, seats: 8 },
     { number: 23, seats: 8 },
-    { number: 24, seats: 8 },
+    { number: 24, seats: 8 }
 ];
 
 function createSeat(tableId, seatIndex, occupied) {
@@ -41,6 +41,8 @@ function createTable(tableId, seatCount) {
         <div class="table-name">${tableId}</div>
         <div class="table-counter">0 / ${seatCount}</div>
       </div>
+      <label for="inputTesto">Cameriere:</label>
+      <input type="text" class="input_cameriere" id="inputTesto autocomplete="off" placeholder="nome cameriere">
       <div class="seat-grid">${seatsHtml}</div>
     </div>
   `;
