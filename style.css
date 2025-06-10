@@ -79,6 +79,15 @@ h1 {
   font-size: 1.2rem;
 }
 
+.input_cameriere{
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  padding-left: 20px;
+}
+
 .seat-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
