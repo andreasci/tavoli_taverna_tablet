@@ -85,7 +85,9 @@ h1 {
   border-top: none;
   border-left: none;
   border-right: none;
-  padding-left: 20px;
+  padding-left: 10px;
+  width: 70%;
+  resize: vertical;
 }
 
 .seat-grid {
