@@ -1,7 +1,7 @@
 const TABLE_LAYOUT = [
     { number: 1, seats: 8 },
     { number: 2, seats: 8 },
-    { number: 3, seats: 16 },
+    { number: 3, seats: 8 },
     { number: 4, seats: 8 },
     { number: 5, seats: 8 },
     { number: 6, seats: 8 },
@@ -18,8 +18,8 @@ const TABLE_LAYOUT = [
     { number: 17, seats: 16 },
     { number: 18, seats: 16 },
     { number: 19, seats: 16 },
-    { number: 20, seats: 16 },
-    { number: 21, seats: 16 },
+    { number: 20, seats: 8 },
+    { number: 21, seats: 8 },
     { number: 22, seats: 8 },
     { number: 23, seats: 8 },
     { number: 24, seats: 8 }
