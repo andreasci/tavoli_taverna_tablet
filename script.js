@@ -19,7 +19,9 @@ const TABLE_LAYOUT = [
     { number: 18, seats: 16 },
     { number: 19, seats: 16 },
     { number: 20, seats: 16 },
-    { number: 21, seats: 16 }
+    { number: 21, seats: 16 },
+    { number: 22, seats: 16 },
+    { number: 23, seats: 8 },
 ];
 
 function createSeat(tableId, seatIndex, occupied) {
